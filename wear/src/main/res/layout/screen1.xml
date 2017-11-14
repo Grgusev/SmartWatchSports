@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:keepScreenOn="true">
+
+    <TextClock
+        android:id="@+id/digital_clock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/kickoff_home_team_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="25dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kickoff_team"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kickoff_away_team_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="25dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kickoff_team"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/digital_clock"
+        android:layout_marginBottom="4dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/home_score_board"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/dark_grey"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/viewHomeActive"
+                android:layout_width="12dp"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homeTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="@color/white"
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/homeTeamScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="13pt" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/away_score_board"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/dark_grey"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="-12dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/awayTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Away"
+                    android:textColor="@color/white"
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/awayTeamScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/awayTeam"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="13pt" />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/viewAwayActive"
+                android:layout_width="12dp"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarCircle"
+        style="@style/tallerBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_board"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:rotation="-180" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBarCircle"
+        android:layout_marginTop="4dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_yellow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#e4cc37" />
+
+        <Button
+            android:id="@+id/btn_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="#bf1a2f" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kickoff_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/score_board"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="45"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <Chronometer
+            android:id="@+id/chronometer1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/first_second_half_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kick Off"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</RelativeLayout>

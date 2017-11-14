@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+	signingConfigs {
+		signing_config {
+			keyAlias 'dk_reflevel'
+			keyPassword '123456'
+			storeFile file('../wear/keystore/dk_reflevel.jks')
+			storePassword '123456'
+		}
+	}
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "dk.reflevel"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+		signingConfig signingConfigs.signing_config
+		multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    wearApp project(':wear')
+
+    compile 'com.google.android.gms:play-services:+'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:support-v4:25.1.1'
+	testCompile 'junit:junit:4.12'
+
+	// Added by Heather
+	compile 'ca.heartlandsoftware:androidheatmap:1.0'
+	compile 'com.android.support:multidex:1.0.1'
+}

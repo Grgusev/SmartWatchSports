@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:windowSwipeToDismiss">false</item>
+    </style>
+    <style name="tallerBarStyle" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressbar</item>
+        <item name="android:indeterminateDrawable">@drawable/progressbar</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:maxHeight">60dip</item>
+    </style>
+    <style name="AppTheme.Picker" parent="AppTheme.Picker" >
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:minLines">3</item>
+        <item name="android:singleLine">false</item>
+    </style>
+    <style name="ListView" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:textSize">1px</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+</resources>

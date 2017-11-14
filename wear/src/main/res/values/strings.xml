@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">RefLevel</string>
+    <string name="title_activity_add_goal">AddGoalActivity</string>
+    <string name="title_activity_add_away_goal">AddAwayGoalActivity</string>
+    <string name="title_activity_option">OptionActivity</string>
+    <string name="title_activity_home_goal_player">HomeGoalPlayer</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_score_board_overview">ScoreBoardOverview</string>
+    <string name="title_activity_away_team_scored">AwayTeamScored</string>
+    <string name="title_activity_coin_flip">CoinFlip</string>
+    <string name="title_activity_choose_home_away_team">ChooseHomeAwayTeam</string>
+    <string name="title_activity_home_yellow_card_booking">HomeYellowCardBooking</string>
+    <string name="title_activity_yellow_card_options">YellowCardOptions</string>
+    <string name="title_activity_booking_overview">BookingOverview</string>
+    <string name="title_activity_set_time">SetTimeActivity</string>
+    <string name="title_activity_red_card_choose_home_away_team">RedCardChooseHomeAwayTeam</string>
+    <string name="title_activity_away_yellow_card_booking">AwayYellowCardBooking</string>
+    <string name="title_activity_away_red_card_booking">AwayRedCardBooking</string>
+    <string name="title_activity_red_vard_options">RedVardOptions</string>
+    <string name="title_activity_home_red_card_booking">HomeRedCardBooking</string>
+    <string name="title_activity_kick_off_team">KickOffTeam</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_substitution">SubstitutionActivity</string>
+    <string name="title_activity_substitution_home">SubstitutionHome</string>
+    <string name="title_activity_substitution_away">SubstitutionAway</string>
+    <string name="hintTxtItem">Navn</string>
+    <string name="lblBtnAdd">Add</string>
+    <string name="lblBtnDelete">Delete</string>
+    <string name="txtEmpty">List is empty</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="remove">Remove</string>
+    <string name="penalties">Penalties</string>
+    <string name="end">End</string>
+    <string name="extra_time">Extra time</string>
+    <string name="home">Home</string>
+    <string name="away">Away</string>
+    <string name="end_penalties">END Penalties?</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
+
+</resources>

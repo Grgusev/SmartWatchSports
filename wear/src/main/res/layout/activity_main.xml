@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dk.reflevel.viewpager.VerticalPager xmlns:android="http://schemas.android.com/apk/res/android"
+															android:id="@+id/activity_main_vertical_pager"
+															android:layout_width="match_parent"
+															android:layout_height="match_parent" >
+
+    <fragment
+        android:id="@+id/main_top_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="dk.reflevel.fragments.Option1Page" />
+
+    <fragment
+        android:id="@+id/main_central_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="dk.reflevel.viewpager.CentralCompositeFragment" />
+
+    <fragment
+        android:id="@+id/main_bottom_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="dk.reflevel.fragments.BookingOverviewFragment" />
+
+</dk.reflevel.viewpager.VerticalPager>

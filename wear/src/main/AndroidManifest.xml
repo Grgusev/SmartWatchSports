@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dk.reflevel">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+        <service
+            android:name=".Tracker.LocationUpdateService"
+            android:process=":Background_Location_Service" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TakePointsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.ChooseHomeAwayTeam"
+            android:label="@string/title_activity_choose_home_away_team" />
+        <activity
+            android:name=".activities.yellowcard.HomeYellowCardBooking"
+            android:label="@string/title_activity_home_yellow_card_booking" />
+        <activity
+            android:name=".activities.yellowcard.YellowCardOptions"
+            android:label="@string/title_activity_yellow_card_options" />
+        <activity
+            android:name=".activities.SetTimeActivity"
+            android:label="@string/title_activity_set_time" />
+        <activity
+            android:name=".activities.RedCardChooseHomeAwayTeam"
+            android:label="@string/title_activity_red_card_choose_home_away_team" />
+        <activity
+            android:name=".activities.yellowcard.AwayYellowCardBooking"
+            android:label="@string/title_activity_away_yellow_card_booking" />
+        <activity
+            android:name=".activities.redcard.AwayRedCardBooking"
+            android:label="@string/title_activity_away_red_card_booking" />
+        <activity
+            android:name=".activities.redcard.HomeRedCardBooking"
+            android:label="@string/title_activity_home_red_card_booking" />
+        <activity
+            android:name=".activities.redcard.RedCardOptions"
+            android:label="@string/title_activity_red_vard_options" />
+        <activity
+            android:name=".activities.KickOffTeam"
+            android:label="@string/title_activity_kick_off_team" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".activities.substitution.SubstitutionActivity"
+            android:label="@string/title_activity_substitution" />
+        <activity
+            android:name=".activities.substitution.SubstitutionHome"
+            android:label="@string/title_activity_substitution_home" />
+        <activity
+            android:name=".activities.substitution.SubstitutionAway"
+            android:label="@string/title_activity_substitution_away" />
+        <activity android:name=".user.AddgoalActivity" />
+        <activity android:name=".user.PenaltyUserlistingActivity" />
+        <activity android:name=".user.RemoveGoalActivity" />
+        <activity android:name=".user.RemoveGoallistingActivity" />
+        <activity android:name=".user.SubActivity" />
+        <activity android:name=".user.AwayTeamOwngoalActivity" />
+        <activity android:name=".user.HometeamSubActivity" />
+        <activity android:name=".user.penalty.PenaltyTeamActivity" />
+        <activity android:name=".user.penalty.EndPenaltiesDialogActivity" />
+        <activity android:name=".user.penalty.HomeTeamlistingActivity" />
+        <activity android:name=".user.CurrentRunningTeamActivity"/>
+        <activity android:name=".user.addname.AwayNumberPickerActivity"/>
+        <activity android:name=".user.addname.RadioNameActivity"/>
+        <activity android:name=".user.addname.AddnameActivity"/>
+    </application>
+
+</manifest>

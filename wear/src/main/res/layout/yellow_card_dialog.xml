@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/home_away_txt_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <RelativeLayout
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/yellow_card_img"
+            android:layout_width="55dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/card_yellow_shape" />
+
+        <TextView
+            android:id="@+id/txt_yellow_card_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="000"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:layout_alignTop="@id/yellow_card_img"
+            android:layout_alignBottom="@id/yellow_card_img"
+            android:layout_alignLeft="@id/yellow_card_img"
+            android:layout_alignRight="@id/yellow_card_img"/>
+    </RelativeLayout>
+</RelativeLayout>

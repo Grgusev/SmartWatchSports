@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/option_layout"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:weightSum="4"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_start_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/whistle"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/screen3_textsize"
+            android:layout_weight="1"
+            android:text="Start Half"/>
+        <Button
+            android:id="@+id/btn_end_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/whistle"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/screen3_textsize"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:text="End Half"/>
+
+        <Button
+            android:id="@+id/sub_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/exchange"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/screen3_textsize"
+            android:text="SUB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/settings"
+            android:text="Settings"
+            android:textSize="@dimen/screen3_textsize" />
+
+        <!--
+        <Button
+            android:id="@+id/set_time_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/alarm"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/screen3_textsize"
+            android:text="Set time"/>
+-->
+
+        <!--
+		<Button
+			android:id="@+id/show_map"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawableTop="@drawable/field"
+			android:background="@android:color/transparent"
+			android:textSize="@dimen/screen3_textsize"
+			android:layout_weight="1"
+			android:text="HeatMap"/>
+-->
+        <Button
+            android:id="@+id/reset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/rubbish"
+            android:text="Reset"
+            android:textSize="@dimen/screen3_textsize" />
+    </LinearLayout>
+</LinearLayout>

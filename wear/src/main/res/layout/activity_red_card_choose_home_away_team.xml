@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical|center_horizontal"
+    tools:context="dk.reflevel.activities.RedCardChooseHomeAwayTeam"
+    android:background="@color/colorPrimaryDark"
+    tools:deviceIds="wear_square">
+
+    <Button
+        android:id="@+id/red_card_home_team_booking_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"/>
+
+    <Button
+        android:id="@+id/red_card_away_team_booking_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Away"/>
+
+    <TextView
+        android:id="@+id/red_card_txt_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/red_card_txt_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</LinearLayout>
